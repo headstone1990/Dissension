@@ -639,7 +639,7 @@ if (hasInterface) then
 	private _GlobalTerrainGrid = "GlobalTerrainGrid" call BIS_fnc_getParamValue;
 	setTerrainGrid _GlobalTerrainGrid;
 	
-	_Null = [] execFSM "DVD.fsm";
+	//_Null = [] execFSM "DVD.fsm";
 	
 };
 [] execVM "Vcom\VcomInit.sqf";
@@ -669,6 +669,7 @@ addMissionEventHandler ["Loaded",
 
 
 enableEnvironment [false, false];
+CHVD_allowNoGrass = true;
 
 
 

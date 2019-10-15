@@ -11,6 +11,7 @@
 #include "scripts\GOM\dialogs\GOM_dialog_parents.hpp"
 #include "scripts\GOM\dialogs\GOM_dialog_controls.hpp"
 #include "compositions\compositions.cfg"
+#include "CHVD\dialog.hpp"
 
 
 overviewPicture = "";
@@ -26,7 +27,7 @@ respawnOnStart =  1;
 
 class Extended_PreInit_EventHandlers 
 {
-	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_CBASettings.sqf";
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
 };
 
 class CfgRemoteExec
@@ -42,6 +43,7 @@ class CfgRemoteExec
 		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
 		class SpawnScript { allowedTargets = 0;jip = 1; };
 		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
 		//Dissension Specific
 		class Haz_fnc_createNotification { allowedTargets = 0;jip = 1; };		
 		class BIS_fnc_call { allowedTargets = 0;jip = 1; };
@@ -98,11 +100,12 @@ class CfgHints
 
 class CfgFunctions 
 {
-	#include "vcom\cfgFunctions.hpp"
+	#include "Vcom\cfgFunctions.hpp"
 	#include "LARs\LARs_spawnComp.cpp"
 	#include "functions\cfgDisFunctions.hpp"
 	#include "GRAD_fireworks\cfgFunctions.hpp"
 	#include "scripts\GOM\functions\GOM_fnc_functions.hpp"
+  #include "CHVD\CfgFunctions.hpp"
 
 	class Haz
 	{
@@ -2453,7 +2456,7 @@ class Params
 		title = "Time Acceleration";
 		texts[] = {"1x","2x","4x","6x","8x","12x"};
 		values[] = {1,2,4,6,8,12};
-		default = 4;
+		default = 1;
 	};	
 	//setTimeMultiplier 
 	class RegionSize
@@ -2461,7 +2464,7 @@ class Params
 		title = "Map Size";
 		texts[] = {"Whole Map","2 KM Radius","3 KM Radius","4 KM Radius","5 KM Radius","6 KM Radius","7 KM Radius","8 KM Radius","9 KM Radius","10 KM Radius"};
 		values[] = {50000,2000,3000,4000,5000,6000,7000,8000,9000,10000};
-		default = 5000;
+		default = 50000;
 	};	
 	class HC
 	{
@@ -2475,7 +2478,7 @@ class Params
 		title = "Dynamic View Distance";
 		texts[] = {"Enabled","Disabled"};
 		values[] = {1,0};
-		default = 1;
+		default = 0;
 	};
 	class CommanderLanguage
 	{
@@ -2538,7 +2541,7 @@ class Params
 		title = "Player Count to Town Garrison Ratio";
 		texts[] = {"0% Increase","10% Increase","20% Increase","30% Increase","40% Increase","50% Increase","60% Increase","70% Increase","80% Increase","90% Increase","100% Increase"};
 		values[] = {0,10,20,30,40,50,60,70,80,90,100};
-		default = 20;	
+		default = 0;	
 	};
 	class Daytime
 	{
@@ -2575,7 +2578,7 @@ class Params
 		title = "Total number of AI allowed in a players group - per group";
 		texts[] = {"4 AI","5 AI","6 AI","7 AI","8 AI","9 AI","10 AI","11 AI","12 AI","100 AI, prepare for lag."};
 		values[] = {4,5,6,7,8,9,10,11,12,100};
-		default = 8;
+		default = 9;
 	};
 	class AIMaxInHighCommand
 	{
@@ -2596,7 +2599,7 @@ class Params
 		title = "Enable or disable A3's stamina system.";
 		texts[] = {"Enabled","Disabled"};
 		values[] = {1,0};
-		default = 1;
+		default = 0;
 	};
 	class A3StaminaValue
 	{
@@ -2610,21 +2613,21 @@ class Params
 		title = "Dissension Revive System";
 		texts[] = {"Enabled","Disabled"};
 		values[] = {1,0};
-		default = 1;
+		default = 0;
 	};
 	class SquadRadar
 	{
 		title = "Enable Dissension Squad Radar";
 		texts[] = {"Enabled","Disabled"};
 		values[] = {1,0};
-		default = 1;
+		default = 0;
 	};
 	class POVCam
 	{
 		title = "3rd Person Camera is Allowed...";
 		texts[] = {"Always","Only in Vehicles","Never"};
 		values[] = {0,1,2};
-		default = 1;	
+		default = 0;	
 	};
 	class TownFurniture
 	{
