@@ -2613,7 +2613,7 @@ class Params
 		title = "Dissension Revive System";
 		texts[] = {"Enabled","Disabled"};
 		values[] = {1,0};
-		default = 0;
+		default = 1;
 	};
 	class SquadRadar
 	{
