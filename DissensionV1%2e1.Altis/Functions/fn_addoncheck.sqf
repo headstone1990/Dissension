@@ -8,7 +8,7 @@ _Mod = "Mod" call BIS_fnc_getParamValue;
 DIS_MODRUN = false;
 
 //ACE CHECK
-if (isClass(configFile >> "CfgPatches" >> "ace_main")) then {ACEACTIVATED = true;DIS_MODRUN = true;} else {ACEACTIVATED = false;};
+if (isClass(configFile >> "CfgPatches" >> "ace_medical")) then {ACEACTIVATED = true;DIS_MODRUN = true;} else {ACEACTIVATED = false;};
 
 //RHS CHECK - THIS INCLUDES THE AFRF
 if (isClass(configFile >> "CfgPatches" >> "rhs_main")) then {RHSACTIVATED = true;DIS_MODRUN = true;} else {RHSACTIVATED = false;};
