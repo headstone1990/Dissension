@@ -147,7 +147,7 @@ waitUntil
 							_NewPower = _NewPower + ((_x select 1) select 1);
 							_NewOil = _NewOil + ((_x select 1) select 2);
 							_NewMaterials = _NewMaterials + ((_x select 1) select 3);	
-							_PTake = 50;
+							_PTake = _PTake + 50;
 						};
 					} foreach CompleteTaskResourceArray;
 				} foreach _PoleArray;
@@ -160,7 +160,7 @@ waitUntil
 						if ((_x select 1 select 0) isEqualTo "Cash") then {_NewCash = _NewCash + (_x select 1 select 1)};
 						if ((_x select 1 select 0) isEqualTo "Oil") then {_NewOil = _NewOil +(_x select 1 select 1)};
 						if ((_x select 1 select 0) isEqualTo "Power") then {_NewPower = _NewPower + (_x select 1 select 1)};
-						_PTake = 25;
+						_PTake = _PTake + 25;
 					};
 				} foreach CompleteRMArray;
 	
