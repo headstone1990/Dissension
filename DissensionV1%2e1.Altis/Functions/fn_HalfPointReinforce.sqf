@@ -103,17 +103,17 @@ switch (_Event) do
 	};
 	case "HELILANDING" : 
 	{
-		private _TransportHeliClassname = "I_Heli_light_03_unarmed_F";
+		private _TransportHeliClassname = "rhsgref_ins_g_Mi8amt";
 		private _ControlledArray = IndControlledArray;
 
 		if (_SSide isEqualTo WEST) then
 		{
-			_TransportHeliClassname = "B_Heli_Transport_01_F";
+			_TransportHeliClassname = "RHS_CH_47F_10";
 			_ControlledArray = BluControlledArray;
 		};
 		if (_SSide isEqualTo EAST) then
 		{
-			_TransportHeliClassname = "O_Heli_Light_02_unarmed_F";
+			_TransportHeliClassname = "RHS_Mi8mt_vvsc";
 			_ControlledArray = OpControlledArray;
 		};
 		private _PolePos = getpos _Pole;

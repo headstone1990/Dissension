@@ -9,14 +9,14 @@ if (playerSide isEqualTo West) then
 	{
 		CfgFortificationArray pushback _x;
 		CfgFortificationHQA pushback _x;
-	} foreach ["B_HMG_01_F","B_HMG_01_high_F","B_GMG_01_F","B_GMG_01_high_F","B_Mortar_01_F","B_static_AA_F","B_static_AT_F","B_SAM_System_03_F","B_Radar_System_01_F"];
+	} foreach ["B_HMG_01_F","B_HMG_01_high_F","B_GMG_01_F","B_GMG_01_high_F","B_Mortar_01_F","B_static_AA_F","B_static_AT_F","B_SAM_System_03_F","B_Radar_System_01_F","RHS_Stinger_AA_pod_D","RHS_M2StaticMG_D","RHS_TOW_TriPod_D","RHS_MK19_TriPod_D","RHS_M252_D","RHS_M119_D"];
 }
 else
 {
 	{
 		CfgFortificationArray pushback _x;
 		CfgFortificationHQA pushback _x;
-	} foreach ["O_HMG_01_F","O_HMG_01_high_F","O_GMG_01_F","O_GMG_01_high_F","O_Mortar_01_F","O_static_AA_F","O_static_AT_F","O_SAM_System_04_F","O_Radar_System_02_F"];
+	} foreach ["O_HMG_01_F","O_HMG_01_high_F","O_GMG_01_F","O_GMG_01_high_F","O_Mortar_01_F","O_static_AA_F","O_static_AT_F","O_SAM_System_04_F","O_Radar_System_02_F","rhs_p37_turret_vpvo","rhs_prv13_turret_vpvo","rhs_Igla_AA_pod_msv","rhs_Kornet_9M133_2_msv","rhs_KORD_high_MSV","RHS_AGS30_TriPod_MSV","RHS_NSV_TriPod_MSV","rhs_SPG9M_MSV","RHS_ZU23_MSV","rhs_Metis_9k115_2_msv","rhs_2b14_82mm_msv","rhs_D30_msv","rhs_D30_AT_msv"];
 };
 
 DIS_AbilityCoolDown = false;

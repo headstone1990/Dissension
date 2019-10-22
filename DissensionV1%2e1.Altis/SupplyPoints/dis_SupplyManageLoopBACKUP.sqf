@@ -39,7 +39,7 @@ if (_CSide isEqualTo West) then
 	_Color = "ColorBlue";
 	_EnemyArray = W_DistArray;
 	_WestRun = true;
-	_Vehicle = "B_Heli_Transport_03_unarmed_F";
+	_Vehicle = "RHS_CH_47F_10";
 	_ESide = East;	
 
 }
@@ -58,7 +58,7 @@ else
 	_Color = "ColorRed";
 	_EnemyArray = E_DistArray;
 	_WestRun = false;
-	_Vehicle = "O_Heli_Transport_04_F";	
+	_Vehicle = "RHS_Mi8mt_vvsc";
 	_ESide = West;	
 
 };

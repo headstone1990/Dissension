@@ -32,16 +32,16 @@ if (_ExecCheck > 0 || _UnitPos distance2D _wPos > 1500) exitWith
 	
 		private _SpawnSide = side (_Group);
 
-		private _BoatVeh = "B_Heli_Transport_01_F";
+		private _BoatVeh = "RHS_CH_47F_10";
 		private _Commander = DIS_WestCommander;
 		if (_SpawnSide isEqualTo east) then
 		{
-			_BoatVeh = "O_Heli_Light_02_unarmed_F";
+			_BoatVeh = "RHS_Mi8mt_vvsc";
 			_Commander = DIS_EastCommander;
 		};
 		if (_SpawnSide isEqualTo resistance) then
 		{
-			_BoatVeh = "I_Heli_light_03_unarmed_F";
+			_BoatVeh = "rhsgref_ins_g_Mi8amt";
 			_Commander = _Leader;
 		};
 	

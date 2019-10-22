@@ -2449,7 +2449,7 @@ class Params
 		title = "Mod";
 		texts[] = {"Vanilla","RHS","Iron Front","Iron Front + FOW","UNSUNG"};
 		values[] = {0,1,2,3,4};
-		default = 0;
+		default = 1;
 	};
 	class TimeSpeed
 	{

@@ -31,10 +31,10 @@ if (_CSide isEqualTo West) then
 	
 	
 	switch (_BuildingArray) do {
-			case "Barracks": { 	_TransportUnit = "B_recon_TL_F"; };
-			case "LFactory": { 	_TransportUnit = "B_T_APC_Wheeled_01_cannon_F"; };
-			case "HFactory": { 	_TransportUnit = "B_T_APC_Tracked_01_rcws_F"; };
-			case "Airfield": { 	_TransportUnit = "B_Heli_Transport_03_unarmed_F"; };
+			case "Barracks": { 	_TransportUnit = "rhsusf_socom_marsoc_teamleader"; };
+			case "LFactory": { 	_TransportUnit = "rhsusf_stryker_m1126_m2_d"; };
+			case "HFactory": { 	_TransportUnit = "RHS_M2A3_BUSKI"; };
+			case "Airfield": { 	_TransportUnit = "RHS_CH_47F_10"; };
 	};	
 		
 	
@@ -63,10 +63,10 @@ else
 	
 	
 	switch (_BuildingArray) do {
-			case "Barracks": { 	_TransportUnit = "O_engineer_F"; };
-			case "LFactory": { 	_TransportUnit = "O_APC_Wheeled_02_rcws_F"; };
-			case "HFactory": { 	_TransportUnit = "O_APC_Tracked_02_cannon_F"; };
-			case "Airfield": { 	_TransportUnit = "O_Heli_Transport_04_box_F"; };
+			case "Barracks": { 	_TransportUnit = "rhs_vmf_recon_rifleman_scout"; };
+			case "LFactory": { 	_TransportUnit = "rhs_btr80_msv"; };
+			case "HFactory": { 	_TransportUnit = "rhs_bmd4m_vdv"; };
+			case "Airfield": { 	_TransportUnit = "RHS_Mi8mt_vvsc"; };
 	};	
 	
 	
