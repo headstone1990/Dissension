@@ -9,17 +9,19 @@ playsound "transport_lz_selected";
 
 
 private _MkT = "b_motor_inf";
-private _Commander = DIS_WestCommander;
+private _Commander = null;
 private _SpawnSide = side (group player);
 
 private _TransportVeh = (W_TransportUnit select 0);
 
 if (_SpawnSide isEqualTo east) then
 {
+	_Commander = DIS_EastCommander;
 	_TransportVeh = (E_TransportUnit select 0);
 };
 if (_SpawnSide isEqualTo resistance) then
 {
+	_Commander = DIS_WestCommander;
 	_TransportVeh = (R_TransportUnit select 0);
 };		
 
